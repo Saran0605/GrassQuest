@@ -1,0 +1,30 @@
+{
+  "name": "grassquest",
+  "version": "1.0.0",
+  "description": "Get people off the screen in 30 seconds. A calm nature-themed outdoor micro-quest generator.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "node server/index.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run install-client && npm run build-client",
+    "install-client": "npm install --prefix client",
+    "build-client": "npm run build --prefix client"
+  },
+  "keywords": ["grassquest", "outdoor", "mindfulness", "react", "express", "gemma", "gemini"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.22.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "helmet": "^7.1.0",
+    "mongoose": "^8.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
